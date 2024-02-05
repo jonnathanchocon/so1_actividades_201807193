@@ -17,12 +17,12 @@ echo -e "usuario_github=${usuario_github}"
 #    la variable GITHUB_USER al final
 
 ruta_github="https://api.github.com/users/${usuario_github}"
+data=$(curl ${ruta_github})
+clear
 
 # 3. Imprimir el mensaje: "Hola <github_user>". User ID: <id>. Cuenta fue creada
 #    el : <created_at>." Los valores enre los signos <> son tomados del JSON
 #    consultado previamente.
-data=$(curl ${ruta_github})
-clear
 id_usuario=$(echo "${data}" | grep -o '"id": [0-9]*' | grep -o '[0-9]*')
 created_at=$(echo "${data}" | grep -o '"created_at": "[^"]*' | grep -o '[^"]*$')
 
@@ -33,7 +33,7 @@ echo "${saludo}"
 #    Donde <fecha> corresponde a la fecha del dia de ejecucion del script.
 
     # Obtener la fedha y guardarlo en una variable
-fecha=$(date +%d-%m-%Y/%H-%M)
+fecha=$(date +%d-%m-%Y-%H-%M)
     # Crear Carpeta
 mkdir /tmp/${fecha}/
     # Escribir en el archivo saludos.log
