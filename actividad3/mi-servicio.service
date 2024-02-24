@@ -1,0 +1,8 @@
+[Unit]
+Description=Servicio saludar
+
+[Service]
+ExecStart=/usr/local/bin/mi-servicio.sh
+
+[Install]
+WantedBy=multi-user.target
