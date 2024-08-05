@@ -87,11 +87,60 @@ sudo groupdel grupo2
 1. **Creación de Archivos y Directorios:**
 
 - Como 'usuario1', crea un archivo llamado 'archivo1.txt' en su directorio principal y escribe algo en él
+
+Cambiar a usuario1
+
+```
+su usuario1
+```
+
+Ingresar al directorio home
+
+```
+cd ~
+```
+
+Crear archivo archivo1.txt
+
+```
+touch archivo1.txt
+```
+
+Editando el archivo con vi
+
+```
+vi archivo1.txt
+```
+
+Para salir y guardar del editor vi
+
+```
+:wq
+```
+
+<img src="./img/vi_archivo1.png" />
+
 - Crea un directorio llamado 'directorio1' y dentro de ese directorio, un archivo llamado 'archivo2.txt'
+
+Crear directorio
+
+```
+mkdir directorio1
+```
+
+Crear archivo 'archivo2.txt'
+
+```
+touch directorio1/archivo2.txt
+```
 
 2. **Verificar Permisos:** Verifica los permisos del archivo y directorio usando el comando 'ls -l' y 'ls -id' respectivamente
 
+<img src="./img/ls_1.png" />
+
 3. **Modificar Permisos usando 'chmod' con Modo Númerico:** Cambia los permisos del 'archivo1.txt' para que sólo 'usuario1' pueda leer y escribir (permisos 'rw-'), el grupo pueda leer (permisos 'r--') y nadie más pueda hacer nada
+
+4. **Modificar Permisos usando 'chmod' con Modo Simbólico:** CAgrega permiso de ejecución al propietario del 'archivo2.txt'
 
 5. **Cambiar el Grupo Propietario:** Cambia el grupo propietario de 'archivo2.txt' a 'grupo1'
 
