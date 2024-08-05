@@ -48,11 +48,39 @@ sudo userdel usuario3
 
 1. **Creación de Grupos:** Crea dos grupos llamados 'grupo1' y 'grupo2'
 
+```
+sudo groupadd grupo1
+```
+
+```
+sudo groupadd grupo2
+```
+
 2. **Agregar Usuarios a Grupos:** Agrega 'usuario1' a 'grupo1' y 'usuario2' a 'grupo2'
+
+```
+sudo gpasswd -a usuario1 grupo1
+```
+
+```
+sudo gpasswd -a usuario2 grupo2
+```
+
+<img src="./img/gpasswd_add.png" />
 
 3. **Verificar Membresía:** Verifica que los usuarios han sido agregados a los grupos utilizando el comando 'groups'
 
+```
+groups usuario1 usuario2
+```
+
+<img src="./img/groups.png" />
+
 4. **Eliminar Grupo:** Elimina 'grupo2'
+
+```
+sudo groupdel grupo2
+```
 
 # Parte 3: Gestión de Permisos
 
