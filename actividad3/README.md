@@ -140,12 +140,72 @@ touch directorio1/archivo2.txt
 
 3. **Modificar Permisos usando 'chmod' con Modo Númerico:** Cambia los permisos del 'archivo1.txt' para que sólo 'usuario1' pueda leer y escribir (permisos 'rw-'), el grupo pueda leer (permisos 'r--') y nadie más pueda hacer nada
 
-4. **Modificar Permisos usando 'chmod' con Modo Simbólico:** CAgrega permiso de ejecución al propietario del 'archivo2.txt'
+Antes de modificar permisos
+
+<img src="./img/ls_2.png" />
+
+```
+rw- -> 4 + 2 + 0 = 6 Usuario
+r-- -> 4 + 0 + 0 = 4 Grupo
+--- -> 0 + 0 + 0 = 0 Otro
+Permiso numerico : 640
+```
+
+Comando
+
+```
+chmod 640 archivo1.txt
+```
+
+<img src="./img/ls_3.png" />
+
+4. **Modificar Permisos usando 'chmod' con Modo Simbólico:** Agrega permiso de ejecución al propietario del 'archivo2.txt'
+
+Antes de cambiar permisos
+
+<img src="./img/ls_4.png" />
+
+```
+chmod u+x directorio1/archivo2.txt
+```
+
+<img src="./img/ls_5.png" />
 
 5. **Cambiar el Grupo Propietario:** Cambia el grupo propietario de 'archivo2.txt' a 'grupo1'
 
+Antes de cambiar el grupo
+
+<img src="./img/ls_6.png" />
+
+```
+chown usuario1:grupo1 directorio1/archivo2.txt
+```
+
+<img src="./img/ls_7.png" />
+
 6. **Configurar Permisos de Directorio:** Cambia los permisos del 'directorio1' para que sólo el propietario pueda entrar (permisos 'rwx'), el grupo pueda listar contenidos pero no entrar (permisos 'r--'), y otros no puedan hacer nada
 
-7. **Comprobación de Acceso:** Intenta acceder al 'archivo1.txt' y 'directorio1/archivo2.txt' como 'usuario2j'. Nota cómo el permiso de directorio afecta el acceso a los archivos dentro de él
+Antes de cambiar permisos
+
+<img src="./img/ls_8.png" />
+
+```
+rwx -> 4 + 2 + 1 = 7 Usuario
+r-- -> 4 + 0 + 0 = 4 Grupo
+--- -> 0 + 0 + 0 = 0 Otro
+Permiso numerico : 640
+```
+
+```
+chmod 740 directorio1
+```
+
+<img src="./img/ls_9.png" />
+
+7. **Comprobación de Acceso:** Intenta acceder al 'archivo1.txt' y 'directorio1/archivo2.txt' como 'usuario2'. Nota cómo el permiso de directorio afecta el acceso a los archivos dentro de él
+
+<img src="./img/ls_error.png" />
 
 8. **Verificación Final:** Verifica los permisos y propietario de los archivos y directorio nuevamente con 'ls -l' y 'ls -ld'
+
+<img src="./img/ls_final.png" />
