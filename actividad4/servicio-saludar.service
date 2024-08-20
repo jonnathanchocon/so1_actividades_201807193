@@ -1,0 +1,8 @@
+[Unit]
+Description=Servicio saludar, muestra un saludo con la fecha actual cada segundo
+
+[Service]
+ExecStart=/usr/local/bin/script-saludar.sh
+
+[Install]
+WantedBy=multi-user.target
