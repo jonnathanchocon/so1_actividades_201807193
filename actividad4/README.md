@@ -1,6 +1,6 @@
 # Actividad 4
 
-## Script que se ejecutara como servicio
+## Script que se ejecutará como servicio
 
 [script-saludar.sh](./script-saludar.sh)
 
@@ -10,7 +10,7 @@
 cp script-saludar.sh /usr/local/bin
 ```
 
-## Archivo de configurarion del servicio
+## Archivo de configuración del servicio
 
 [servicio-saludar.service](./servicio-saludar.service)
 
@@ -20,7 +20,7 @@ cp script-saludar.sh /usr/local/bin
 cp servicio-saludar.service /etc/systemd/system
 ```
 
-## Configuracion del servicio
+## Configuración del servicio
 
 - **Verificar el estado del servicio**
 
