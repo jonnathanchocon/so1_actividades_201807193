@@ -12,11 +12,13 @@ int main()
     if (pid == 0) // Proceso hijo
     {
         printf("Proceso principal crea proceso hijo: %d\n", getpid());
+        pid_t pid = getpid();
         pid_t pid2 = fork(); // En este punto se crea otro para el hijo, seria el nieto = 3
         if (pid2 == 0)
         {
-            printf("Proceso hijo Crea proceso nieto: %d\n", getpid());
+            printf("Proceso hijo pid: %d Crea proceso pid: %d\n", pid, getpid());
         }
+        wait(NULL);
     }
     else // Proceso padre
     {

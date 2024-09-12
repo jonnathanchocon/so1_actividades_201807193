@@ -1,2 +1,2 @@
 build:
-	gcc -o main src/main.c
+	gcc -o main.out src/main.c
