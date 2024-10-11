@@ -64,3 +64,8 @@ kubectl apply -f deployment.yaml
 ```
 
 ## 3. Contestar a siguiente pregunta. ¿En un ambiente local de Kubernetes existen los nodos masters y workers, como es que esto funciona?
+
+El nodos worker alojan pods y los nodos master
+administran los nodos worker y los pods en el clúster, es decir los nodos
+master son los encargados de establecer en que nodo
+worker se va a alojar cada pod.
