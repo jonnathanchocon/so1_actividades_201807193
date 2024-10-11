@@ -55,6 +55,21 @@ spec:
           image: nginx:1.27.2
           ports:
             - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+  type: LoadBalancer
 ```
 
 * Crear deployment con el siguiente comando
